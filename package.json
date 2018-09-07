@@ -1,0 +1,11 @@
+{
+    "name": "static-file-fun",
+    "private": true,
+    "scripts": {
+        "start": "nodemon app.js"
+    },
+    "dependencies": {
+        "express": "^4.16.3",
+        "nodemon": "^1.18.4"
+    }
+}
