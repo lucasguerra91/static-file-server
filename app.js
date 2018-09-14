@@ -2,6 +2,7 @@
 const express = require('express')
 const morgan = require('morgan')
 const path = require('path')
+var apiRouter = require('./routes/api_router')
 // const fs = require('fs') lo usabamos para nuestra rutina de servir archivo
 
 // Crea una aplicacion express y la pone dentro de la variable app
@@ -17,6 +18,8 @@ app.use((req, res) => {
   res.status(404)
   res.send('No se ha encontrado el archivo!')
 })
+
+app.use('/api', apiRouter)
 
 app.use((err, req, res, next) => { // incluimos el parametro error
   console.error(err) // logueamos el error
